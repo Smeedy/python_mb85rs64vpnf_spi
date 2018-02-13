@@ -8,11 +8,15 @@
 #
 #   --
 #   Python library for reading and writing to FRAM memory with SPI
-#   using a Fujitsu MB85RS64VPNF module.
+#   using a Fujitsu MB85RS64VPNF module. You will need an SPI object
+#   (from hardware or soft-pin) for data transfer, and a CS-pin (output) to
+#   activate/deactive the chip.
 #   --
 #
-#   You will need an SPI object (from hardware or soft-pin) for data transfer,
-#   and a CS-pin (output) to activate/deactive the chip.
+#   version history:
+#       v1      - First release
+#
+#
 #
 #   Credit where credit is due: This library is a plain and rather
 #   straighforward port of the Adafruit CPP module (BSD) by
@@ -44,7 +48,7 @@
 #   fram.writeEnable(True)
 #   fram.write(0x0031, "Hello, world!")
 #   fram.writeEnable(False)
-#   fram.read(0x0030, 14)
+#   data = fram.read(0x0030, 14)
 #   # bytearray(b'\xffHello, world!')
 #
 
