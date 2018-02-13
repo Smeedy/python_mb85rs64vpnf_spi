@@ -39,3 +39,5 @@ fram.writeEnable(False)
 data = fram.read(0x0030, 14)
 # bytearray(b'\xffHello, world!')
 ```
+
+Please visit the Adafruit library C++ page for inspiration on dumping 8k of data to screen.
